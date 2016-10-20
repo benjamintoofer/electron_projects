@@ -2,36 +2,51 @@
 <html>
   <head>
     <link rel="stylesheet" type="text/css" href="./css/index.css">
+    <!-- <script src="./js/index.js" charset="utf-8"></script> -->
+    <!-- <script src="./js/ListManager.js"></script> -->
     <meta charset="UTF-8">
     <title>Reminders</title>
   </head>
   <body>
+
       <div id="main-page">
           <div class="glass">
           </div>
-          <div id="list-container">
+          <div id="wrapper-list-container" class="flex-vert">
               <div id="search-container">
                   <div>
                       <input type="text" name="FirstName" placeholder="Search">
                   </div>
               </div>
-              <div id="local-list-container">
-                  <div class="list-item no-select">
-                      Scheduled
+              <div id="list-container" class="flex-vert">
+                  <div id="local-list-container">
+                      <div class="list-item no-select">
+                          Scheduled
+                      </div>
                   </div>
-              </div>
-              <div id="icloud-list-container">
-                  <div id="icloud-title-block">
-                      iCloud
+                  <div id="icloud-list-container">
+                      <div id="icloud-title-block">
+                          iCloud
+                      </div>
+                      <div class="list-item no-select">
+                          Scheduled
+                      </div>
+                      <div class="list-item no-select">
+                          Scheduled
+                      </div>
+                      <div class="list-item selected no-select">
+                          Scheduled
+                      </div>
                   </div>
-                  <div class="list-item no-select">
-                      Scheduled
-                  </div>
-                  <div class="list-item no-select">
-                      Scheduled
-                  </div>
-                  <div class="list-item selected no-select">
-                      Scheduled
+                  <div id="add-list-button-block">
+                      <div id="add-list-button" class="list-item no-select flex-display">
+                          <div id="inverted-plus">
+                            +
+                          </div>
+                          <div>
+                              Add List
+                          </div>
+                      </div>
                   </div>
               </div>
           </div>
@@ -80,9 +95,53 @@
                               </div>
                           </div>
                       </div>
+                      <div class="row flex-display">
+                          <div class="info-content center-text flex-display">
+                              <div class="circle-outer flex-display">
+                                  <div class="circle-inner">
+
+                                  </div>
+                              </div>
+                          </div>
+                          <div class="temp">
+
+                              <div class="text-content completed-text">
+                                  Completed
+                              </div>
+                              <div class="extra-content">
+
+                              </div>
+                          </div>
+                      </div>
+                      <div class="row flex-display">
+                          <div class="info-content center-text flex-display">
+                              <div class="circle-outer flex-display">
+                                  <div class="circle-inner">
+
+                                  </div>
+                              </div>
+                          </div>
+                          <div class="temp">
+
+                              <div class="text-content completed-text">
+                                  Completed
+                              </div>
+                              <div class="extra-content">
+
+                              </div>
+                          </div>
+                      </div>
                   </div>
               </div>
           </div>
       </div>
+      <script type="text/javascript">
+        let util = require('./js/Util.js')
+        let DataModel = require('./js/DataModel.js')
+        let Note = require('./js/Note.js')
+        let ListItem = require('./js/ListItem.js')
+        let ListManager = require('./js/ListManager.js')
+        require('./js/index.js')
+      </script>
   </body>
 </html>

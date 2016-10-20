@@ -1,0 +1,32 @@
+{
+    "All":
+    {
+        "Lists":
+        {
+            "Scheduled":
+            {
+                "School_title":"Hello"
+            }
+        }
+    },
+    "iCloud":
+    {
+        "Lists":
+        {
+            "Stuff":{
+
+            },
+            "Reminders":
+            {
+
+            },
+            "School":
+            {
+                "School_title":"Note Title",
+                "School_repeat":true,
+                "School_priority":1,
+                "School_note":"This is the note"
+            }
+        }
+    }
+}

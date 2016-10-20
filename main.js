@@ -16,7 +16,7 @@ function create_window(){
         win = null
     })
 }
-console.log("HELLO");
+console.log(app.getPath('userData'));
 // app.commandLine.appendSwitch('enable-transparent-visuals');
     app.on('ready',create_window)
     app.commandLine.appendSwitch('--enable-experimental-web-platform-features');

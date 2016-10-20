@@ -70,6 +70,22 @@ input[type=text]:focus{
     /*background: red;*/
 
 }
+.flex-vert{
+    display: flex;
+    flex-direction: column;
+}
+
+.flex-vert > #list-container{
+    flex: 1;
+}
+
+.flex-vert > #icloud-list-container {
+    flex: 1 0 auto;
+}
+
+.flex-vert > #add-list-button-block{
+    flex: 0 1 auto;
+}
 
 .flex-display{
     display: flex;
@@ -95,7 +111,7 @@ input[type=text]:focus{
 }
 
 .circle-inner:active{
-    background-color: rgb(254, 203, 47);
+    background-color: rgb(255, 73, 124);
 }
 .completed-text{
     font-family: Helvetica;
@@ -123,15 +139,42 @@ input[type=text]:focus{
     color: rgb(43, 173, 245);
     /*background-color: green;*/
 }
+#add-list-button-block:active #inverted-plus{
+    background-color: rgba(0, 0, 0, 1);
+}
+#add-list-button{
+    justify-content: flex-start;
+}
+#inverted-plus{
+    width: 18px;
+    height: 18px;
+    background-color: rgba(110, 110, 110, 0.8);
+    border-radius: 50%;
+    /*position: relative;
+    top: -5px;*/
+    color: rgba(255, 255, 255, .8);
+    font-size: 20px;
+    font-weight: 100;
+    line-height: 16px;
+    text-align: center;
+    margin-right: 3px;
+}
 
-#list-container{
-    height:100%;
+#wrapper-list-container{
+    height:100vh;
     width:190px;
     min-width: 190px;
     border-right: 1px solid rgb(220, 220, 220);
     z-index: 2;
+    resize: both;
 }
 
+#icloud-list-container{
+    height: auto;
+}
+#local-list-container{
+    height: auto;
+}
 #search-container{
     padding: 27px 6% 16px 6%;
 }
@@ -223,7 +266,7 @@ input[type=text]:focus{
 }
 
 @media (max-width: 470px) {
-    #list-container{
+    #wrapper-list-container{
         width:0%;
         min-width: 0px;
         visibility: hidden;
